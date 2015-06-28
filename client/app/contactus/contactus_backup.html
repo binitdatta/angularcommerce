@@ -1,0 +1,103 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<!-- <header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Contact Us!!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header> -->
+
+  <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Math <span class="em-text">Gymnasium</span></h1>
+            <p>A fun and thrilling way to enjoy and practice Math problems</p>
+            <a href="#"><img class="app-btn" src="assets/images/icon_app_store.png"></a>
+            <a href="#"><img class="app-btn" src="assets/images/icon_google_play.png"></a>
+          </div>
+          <div class="col-md-6">
+            <!-- <img class="showcase-img" src="assets/images/mathcup_10.jpg"> -->
+            <img class="showcase-img" src="assets/images/mathcup10.jpg">
+			
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="container" ng-controller='ContactUsCtrl'>
+        <h1>Contact US</h1>
+        <form role='form'>
+            <div class='form-group'>
+                <div class="input-group">
+                	<div class="blockDiv questionDiv">
+	                	<div class="blockDiv labelDiv title"></div>
+		                	<div class="blockDiv rowDiv">
+								<div class="blockDiv labelDiv">First Name</div>
+								<div class="blockDiv textDiv">
+									<input ng-model="firstname" width="150">
+								</div>
+							</div>
+							<div class="blockDiv rowDiv">
+								<div class="blockDiv labelDiv">Last Name</div>
+								<div class="blockDiv textDiv">
+									<input ng-model="lastname" width="150">
+								</div>
+							</div>
+							<div class="blockDiv rowDiv">
+								<div class="blockDiv labelDiv">User Name</div>
+								<div class="blockDiv textDiv">
+	 									<input ng-model="username" width="150">
+								 </div>
+							</div>
+							<div class="blockDiv rowDiv">
+								<div class="blockDiv labelDiv">Email Id</div>
+								<div class="blockDiv textDiv">
+									<input width="150" ng-model="emailid">
+								</div>
+							</div>
+						<div class="blockDiv rowDiv">
+							<div class="blockDiv labelDiv">Remarks</div>
+							<div class="blockDiv textDiv">
+								<textarea rows="10" cols="100" class='form-control' ng-model="remarks"></textarea>
+							</div>
+						</div>
+					</div>
+					
+						<div class="blockDiv rowDiv">	
+							<div class="blockDiv labelDiv">
+								<button ng-click='submit()' class='btn btn-default'>
+									<strong>Submit</strong>
+								</button>
+							</div>							
+						</div>
+
+					</div>
+
+                </div>
+            </div>
+        </form>
+        <br/>
+	 </div>
+</div>
+
+
+
+  <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <p>Copyright &copy; 2015, All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
