@@ -89,7 +89,36 @@
 			  </form> <!-- First horizontal form -->
 			  <form class="form-inline">
             	<div class="blockDiv answerDiv">
-    	            	<div class="blockDiv labelDiv title">Answers</div>
+    	            	<div class="blockDiv labelDiv title"><strong>Answers</strong></div>
+						<!-- <div class="blockDiv rowDiv">
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">ID</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">Type</label>
+											<label class="col-sm-2 control-label control-label-inline">Answer</label>
+										</div>
+										 <div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">ID</label>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">Type</label>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">Answer</label>
+										</div>	
+						</div>	 -->
 						<div class="blockDiv rowDiv">
 							<div class="blockDiv labelDiv"><strong>&nbsp;</strong></div>
 							<div class="form-group">
@@ -121,7 +150,7 @@
 						    </div>
 						</div>
 
-						  <div class="blockDiv rowDiv">
+						 <div class="blockDiv rowDiv">
 							<div class="blockDiv labelDiv"><strong>Answer B</strong></div>
 							<div class="form-group">
 							    <input type="text" class="form-control" id="answerssecondanswerid" ng-model="answerssecondanswerid" width="5" placeholder="">
@@ -134,7 +163,7 @@
 						    </div>
 						</div>
 
-						 <div class="blockDiv rowDiv">
+						  <div class="blockDiv rowDiv">
 							<div class="blockDiv labelDiv"><strong>Answer C</strong></div>
 							<div class="form-group">
 							    <input type="text" class="form-control" id="answersthirdanswerid" ng-model="answersthirdanswerid" width="5" placeholder="">
@@ -148,22 +177,17 @@
 						
 						</div>
 						 
-						 	 <div class="blockDiv rowDiv">
+						   <div class="blockDiv rowDiv">
 							<div class="blockDiv labelDiv"><strong>Answer D</strong></div>
 							<div class="form-group">
 							    <input type="text" class="form-control" id="answersforthanswerid" ng-model="answersforthanswerid" width="5" placeholder="">
-								<select id="answertypesel" class="form-control" width="20" ng-model="answersforthanswertype">
+								 <select id="answertypesel" class="form-control" width="20" ng-model="answersforthanswertype">
 								  <option selected="selected">Select</option> 
 								  <option value="Correct" selected>Correct</option>
 							      <option value="Incorrect">Incorrect</option>
 							   </select>
-							     <input type="text" class="form-control" id="answersforthanswer" ng-model="answersforthanswer" width="25" placeholder="">
-						    </div>
-						
+							    <input type="text" class="form-control" id="answersforthanswer" ng-model="answersforthanswer" width="25" placeholder="">
 						</div>
-
-			
-						
 					  </form> <!-- Answer inline form -->
 						
 
@@ -228,19 +252,26 @@
 										<div class="blockDiv label2Div title"><strong>Dependent Question Answers</strong></div>
 								</div>
 								<div class="blockDiv rowDiv">
-										<div class="blockDiv labelDiv"><strong>&nbsp;</strong></div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+										</div>
 										<div class="form-group">
 											<label class="col-sm-2 control-label control-label-inline">ID</label>
+										</div>
+										<div class="form-group">
 											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
-											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+										</div>
+										<div class="form-group">
 											<label class="col-sm-2 control-label control-label-inline">Type</label>
+										</div>
+										<div class="form-group">
 											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+										</div>
+										<div class="form-group">
 											<label class="col-sm-2 control-label control-label-inline">Answer</label>
-											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
-											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
-											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
-											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
-
 										</div>
 									<!-- <div class="blockDiv labelDiv">&nbsp;</div><div class="blockDiv labelDiv col1">ID</div><div class="blockDiv labelDiv col2">Type</div><div class="blockDiv labelDiv col3">Answer</div>  -->
 								</div>
@@ -248,37 +279,48 @@
 									<div class="blockDiv labelDiv"><strong>Answer A</strong></div>
 										<div class="form-group">
 											<input type="text" class="form-control" id="dependentquestionanswersfirstanswerid" ng-model="dependentquestionanswersfirstanswerid" width="5" placeholder="">
+										</div>
+										<div class="form-group">
 										   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionanswersfirstanswertype">
 											  <option selected="selected">Select</option> 
 											  <option value="Correct" selected>Correct</option>
 											  <option value="Incorrect">Incorrect</option>
 										   </select>
-										   	<input type="text" class="form-control" id="dependentquestionanswersfirstanswer" ng-model="dependentquestionanswersfirstanswer" width="25" placeholder="">
 										</div>
-									
+										<div class="form-group">
+											<input type="text" class="form-control" id="dependentquestionanswersfirstanswer" ng-model="dependentquestionanswersfirstanswer" width="25" placeholder="">
+										</div>
 									</div>
 									 <div class="blockDiv rowDiv">
 											<div class="blockDiv labelDiv"><strong>Answer B</strong></div>
 											<div class="form-group">
 												<input type="text" class="form-control" id="dependentquestionanswerssecondanswerid" ng-model="dependentquestionanswerssecondanswerid" width="5" placeholder="">
+											</div>
+											<div class="form-group">
 											   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionanswerssecondanswertype">
 												  <option selected="selected">Select</option> 
 												  <option value="Correct" selected>Correct</option>
 												  <option value="Incorrect">Incorrect</option>
 											   </select>
-											   <input type="text" class="form-control" id="dependentquestionsecondanswer" ng-model="dependentquestionsecondanswer" width="25" placeholder="">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="dependentquestionsecondanswer" ng-model="dependentquestionsecondanswer" width="25" placeholder="">
 											</div>
 									</div>
 									<div class="blockDiv rowDiv">
 										<div class="blockDiv labelDiv"><strong>Answer C</strong></div>
 											<div class="form-group">
 												<input type="text" class="form-control" id="dependentquestionthirdanswerid" ng-model="dependentquestionthirdanswerid" width="5" placeholder="">
-												   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionthirdanswertype">
+											</div>
+											<div class="form-group">
+											   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionthirdanswertype">
 												  <option selected="selected">Select</option> 
 												  <option value="Correct" selected>Correct</option>
 												  <option value="Incorrect">Incorrect</option>
 											   </select>
-											   <input type="text" class="form-control" id="dependentquestionthirdanswer" ng-model="dependentquestionthirdanswer" width="25" placeholder="">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="dependentquestionthirdanswer" ng-model="dependentquestionthirdanswer" width="25" placeholder="">
 											</div>
 									</div>
 
@@ -286,12 +328,16 @@
 											<div class="blockDiv labelDiv"><strong>Answer D</strong></div>
 											<div class="form-group">
 												<input type="text" class="form-control" id="dependentquestionforthanswerid" ng-model="dependentquestionforthanswerid" width="5" placeholder="">
+											</div>
+											<div class="form-group">
 											   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionforthanswertype">
 												  <option selected="selected">Select</option> 
 												  <option value="Correct" selected>Correct</option>
 												  <option value="Incorrect">Incorrect</option>
 											   </select>
-											   <input type="text" class="form-control" id="dependentquestionforthanswer" ng-model="dependentquestionforthanswer" width="25" placeholder="">
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="dependentquestionforthanswer" ng-model="dependentquestionforthanswer" width="25" placeholder="">
 											</div>
 									</div>
 							 </form>
