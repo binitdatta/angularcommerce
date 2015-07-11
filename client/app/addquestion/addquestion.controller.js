@@ -111,11 +111,14 @@
 
 		  console.log('I am at showDependentQuestionsSubForm');
 			document.getElementById('dependentquestion').style.display = "block";
+			document.getElementById('dependentquestionanswers').style.display = "block";
 			}
 
 			$scope.hideDependentQuestionsSubForm = function() {	
 			  console.log('I am at hideDependentQuestionsSubForm');
 				document.getElementById('dependentquestion').style.display = "none";
+				document.getElementById('dependentquestionanswers').style.display = "none";
+
 			}
 
 			$scope.exam_questions = [];
