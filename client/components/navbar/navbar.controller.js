@@ -21,7 +21,8 @@ angular.module('mathsgymnasiamApp')
 	{
       'title': 'Contact Us',
       'link': '/contactus'
-    }];
+    }
+];
 
 	
 
