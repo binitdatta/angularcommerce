@@ -7,10 +7,6 @@ angular.module('mathsgymnasiamApp')
       'link': '/'
     },
 	{
-      'title': 'Add Question',
-      'link': '/addquestion'
-    },
-	{
       'title': 'Take a Test',
       'link': '/takeatest'
     },
