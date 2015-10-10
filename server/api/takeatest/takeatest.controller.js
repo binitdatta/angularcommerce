@@ -21,6 +21,34 @@ exports.show = function(req, res) {
   });
 };
 
+// Get a single takeatest
+exports.showForUser = function(req, res) {
+	console.log('I am here');
+	//var userId = req.param('id');
+	var userId = req.params.userid;
+
+	console.log('in server userId :'+userId);
+
+	var myQuery = Takeatest.find({'userid' : userId});
+
+	myQuery.exec(function (err, takeatest){
+	if (!err){
+		console.log(takeatest); // output array of users found
+		 if(err) { return handleError(res, err); }
+	    if(!takeatest) { return res.send(404); }
+			console.log(takeatest);
+		    return res.json(takeatest);
+		}
+	});
+
+/*  Takeatest.find({userid:userId}, function (err, takeatest) {
+    if(err) { return handleError(res, err); }
+    if(!takeatest) { return res.send(404); }
+	console.log(takeatest);
+    return res.json(takeatest);
+  });*/
+};
+
 // Creates a new takeatest in the DB.
 exports.create = function(req, res) {
   var id = mongoose.Types.ObjectId();
@@ -48,8 +76,12 @@ console.log(local_exam_question.explanation);
     examquestion: req.body._questionid,
 	primaryanswer: req.body.primaryanswer,
 	dependentanswer:req.body.dependentanswer,
+	primarycorrectanswer:req.body.primarycorrectanswer,
+	dependentcorrectanswer:req.body.dependentcorrectanswer,
+	primaryevaluatedresult:req.body.primaryevaluatedresult,
+	dependentevaluatedresult:req.body.dependentevaluatedresult,
 	grade:req.body.grade,
-	userid:req.body.part,
+	userid:req.body.userid,
 	username:req.body.username,
 	useremail:req.body.useremail,
 	primaryexplanation:	 req.body.primaryexplanation});

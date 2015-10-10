@@ -40,11 +40,23 @@
 								<div class="blockDiv textDiv">
 									<input ng-model="basicfact" width="100" {{basicfact}}>
 									<input type="hidden" name="_questionid" ng-model="_questionid" value={{_questionid}}>
-									<input type="hidden" name="userid" ng-model="_questionid" value={{userid}}>
-									<input type="hidden" name="useremail" ng-model="_questionid" value={{useremail}}>
-									<input type="hidden" name="username" ng-model="_questionid" value={{username}}>
+									<input type="hidden" name="question_array_index" ng-model="question_array_index" value={{question_array_index}}>
+									<input type="hidden" name="userid" ng-model="userid" value={{userid}}>
+									<input type="hidden" name="useremail" ng-model="useremail" value={{useremail}}>
+									<input type="hidden" name="username" ng-model="username" value={{username}}>
 									<input type="hidden" name="grade" ng-model="grade" value={{grade}}>
 									<input type="hidden" name="explanation" ng-model="explanation" value={{explanation}}>
+
+									<input type="hidden" name="answertypeA" ng-model="answertypeA" value={{answertypeA}}>
+									<input type="hidden" name="answertypeB" ng-model="answertypeB" value={{answertypeB}}>
+									<input type="hidden" name="answertypeC" ng-model="answertypeC" value={{answertypeC}}>
+									<input type="hidden" name="answertypeD" ng-model="answertypeD" value={{answertypeD}}>
+
+									<input type="hidden" name="dependentAnswertypeA" ng-model="dependentAnswertypeA" value={{dependentAnswertypeA}}>
+									<input type="hidden" name="dependentAnswertypeB" ng-model="dependentAnswertypeB" value={{dependentAnswertypeB}}>
+									<input type="hidden" name="dependentAnswertypeC" ng-model="dependentAnswertypeC" value={{dependentAnswertypeC}}>
+									<input type="hidden" name="dependentAnswertypeD" ng-model="dependentAnswertypeD" value={{dependentAnswertypeD}}>
+
 								</div>
 							</div>
 						
@@ -144,7 +156,17 @@
 								<button ng-click='submit()' class='btn btn-default'>
 									<strong>Submit</strong>
 								</button>
-							</div>							
+							</div>
+							<div class="blockDiv labelDiv">
+								<button ng-click='next()' class='btn btn-default'>
+									<strong>Next</strong>
+								</button>
+							</div>	
+							<div class="blockDiv labelDiv">
+								<button ng-click='previous()' class='btn btn-default'>
+									<strong>Previous</strong>
+								</button>
+							</div>	
 			
 						</div>
                 </div>

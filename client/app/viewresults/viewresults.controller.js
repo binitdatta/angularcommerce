@@ -1,22 +1,14 @@
 'use strict';
 
 angular.module('mathsgymnasiamApp')
-  .controller('ViewResultsCtrl', function ($scope, $http) {
+  .controller('ViewResultsCtrl', function ($scope, $http, Auth) {
+	 var userid = Auth.getCurrentUser()._id;
+	 console.log('userid = '+userid);
     $scope.awesomeThings = [];
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
+    $http.get('api/takeatest/users/'+userid).success(function(userresults) {
+      $scope.userresults = userresults;
+	  console.log(userresults);
     });
 
-    $scope.addThing = function() {
-      if($scope.newThing === '') {
-        return;
-      }
-      $http.post('/api/things', { name: $scope.newThing });
-      $scope.newThing = '';
-    };
-
-    $scope.deleteThing = function(thing) {
-      $http.delete('/api/things/' + thing._id);
-    };
   });

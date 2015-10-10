@@ -1,0 +1,73 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+  <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Math <span class="em-text">Gymnasium</span></h1>
+            <p>A fun and thrilling way to enjoy and practice Math problems</p>
+            <a href="#"><img class="app-btn" src="assets/images/icon_app_store.png"></a>
+            <a href="#"><img class="app-btn" src="assets/images/icon_google_play.png"></a>
+          </div>
+          <div class="col-md-6">
+            <!-- <img class="showcase-img" src="assets/images/mathcup_10.jpg"> -->
+            <img class="showcase-img" src="assets/images/mathcup10.jpg">
+			
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="container" ng-controller='RoleCtrl'>
+        <h1>Add Role</h1>
+
+          <form class="form-horizontal">
+              <div class="form-group">
+                  <label for="rolename" class="col-sm-2 control-label control-label-inline">Role Name</label>
+                  <div class="col-sm-10">
+                        <input class="form-control form-control-inline" id="rolename" ng-model="rolename" width="100" placeholder="rolename">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="roledesc" class="col-sm-2 control-label control-label-inline">Role Description</label>
+                  <div class="col-sm-10">
+                        <input class="form-control form-control-inline" id="roledesc" ng-model="roledesc" width="150" placeholder="roledesc">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="role" class="col-sm-2 control-label control-label-inline">Role</label>
+                  <div class="col-sm-10">
+                        <input class="form-control form-control-inline" id="role" ng-model="role" width="150" placeholder="role">
+                  </div>
+              </div>  
+            
+                       
+              <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" ng-click='submit()' class="btn btn-default"><strong>Submit</strong></button>
+              </div>
+              </div>
+            </form>
+
+        <br/>
+	 </div>
+</div>
+
+
+
+  <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <p>Copyright &copy; 2015, All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
