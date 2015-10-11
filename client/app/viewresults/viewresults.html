@@ -20,79 +20,96 @@
 
    <section id="middle">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <img src="assets/images/mathcup_4.jpg" class="demo">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis tempus varius. Sed porttitor ex id lectus interdum tristique.</p>
-            <a href="#" class="btn btn-default">Read More</a>
-          </div>
-          <div class="col-md-4">
-            <img src="assets/images/mathcup_6.jpg" class="demo">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis tempus varius. Sed porttitor ex id lectus interdum tristique.</p>
-            <a href="#" class="btn btn-default">Read More</a>
-          </div>
-          <div class="col-md-4">
-            <img src="assets/images/mathcup_8.jpg" class="demo">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis tempus varius. Sed porttitor ex id lectus interdum tristique.</p>
-            <a href="#" class="btn btn-default">Read More</a>
-          </div>
-        </div>
+    <!--	<table>
+	    <tr>
+		    <th>Question</th>
+			<th>Primary Ans.</th>
+			<th>Primary Correct Ans.</th>
+			<th>Student Answer</th>
+	        <th>Dependent Ans</th>
+	        <th>Dependent Correct Ans.</th>
+	        <th>Student Dependent Anser.</th>
+		</tr>
+    <tr ng-repeat="result in studentresults">
+        <td colspan="2">{{result.examquestion}}</td>
+        <td colspan="2">{{result.primaryanswer}}</td>
+        <td colspan="2">{{result.primarycorrectanswer}}</td>
+        <td colspan="2">{{result.primaryevaluatedresult}}</td>
+        <td colspan="2">{{result.dependentanswer}}</td>
+        <td colspan="2">{{result.dependentcorrectanswer}}</td>
+        <td colspan="2">{{result.dependentevaluatedresult}}</td>
+    </tr>
+</table>  -->
+		<div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">User Name</div>
+						<div class="blockDiv textDiv">
+							{{username}}
+						</div>
+				</div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">User Email</div>
+						<div class="blockDiv textDiv">
+							{{useremail}}
+						</div>
+				</div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">Student Grade</div>
+						<div class="blockDiv textDiv">
+							{{grade}}
+						</div>
+				</div>
+		</div>
+		<hr/>
+		<h2>Student Test Results</h2>
+			<div ng-repeat="result in studentresults">
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">Exam Question</div>
+						<div class="blockDiv textDiv">
+							{{result.examquestion}}
+						</div>
+				</div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">Primary Answer</div>
+						<div class="blockDiv textDiv">
+							{{result.primaryanswer}}
+						</div>
+				</div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">Primary Correct Answer</div>
+						<div class="blockDiv textDiv">
+							{{result.primarycorrectanswer}}
+						</div>
+				</div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">Primary Result</div>
+						<div class="blockDiv textDiv">
+							{{result.primaryevaluatedresult}}
+						</div>
+				</div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">Dependent Answer</div>
+						<div class="blockDiv textDiv">
+							{{result.dependentanswer}}
+						</div>
+				</div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">Dependent Correct Answer</div>
+						<div class="blockDiv textDiv">
+							{{result.dependentcorrectanswer}}
+						</div>
+				</div>
+				<div class="blockDiv rowDiv">
+					<div class="blockDiv labelDiv">Dependent Result</div>
+						<div class="blockDiv textDiv">
+							{{result.dependentevaluatedresult}}
+						</div>
+				</div>
+			</div>
       </div>
     </section>
 
-   <section id="feature">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5">
-            <h1>Math Gymnasium Features</h1>
-            <ul>
-              <li> <i class="glyphicon glyphicon-ok"></i>Math Word Problems </li>
-              <li> <i class="glyphicon glyphicon-ok"></i>Ratio</li>
-              <li> <i class="glyphicon glyphicon-ok"></i>Percentage</li>
-              <li> <i class="glyphicon glyphicon-ok"></i>Algebra</li>
-              <li> <i class="glyphicon glyphicon-ok"></i>Geometry</li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-md-offset-2">
-            <img class="big-logo" src="assets/images/Learning-Materials--Poster-Math-Is-Infinite--T-A63084_L.jpg">
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-	 --> 
-<!-- <footer class="footer">
-  <div class="container">
-      <p>Angular Fullstack v2.0.13 |
-        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
-  </div>
-</footer>
--->
+ 
    <footer>
       <div class="container">
         <div class="row">
