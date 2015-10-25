@@ -60,13 +60,18 @@
 						</div>
 				</div>
 		</div>
-		<hr/>
+		<hr></hr>
+		<div>
+			<!-- <hr style="height:10px;border:1px;color:#000000;" /> -->
+			<h2>_____________________________________________________________________________</h2>
+		</div>
+
 		<h2>Student Test Results</h2>
 			<div ng-repeat="result in studentresults">
 				<div class="blockDiv rowDiv">
 					<div class="blockDiv labelDiv">Exam Question</div>
 						<div class="blockDiv textDiv">
-							{{result.examquestion}}
+							{{result.examquestiontext}}
 						</div>
 				</div>
 				<div class="blockDiv rowDiv">
@@ -104,6 +109,10 @@
 						<div class="blockDiv textDiv">
 							{{result.dependentevaluatedresult}}
 						</div>
+				</div>
+				<div>
+					<!-- <hr style="height:10px;border:1px;color:#000000;" /> -->
+					<h2>_____________________________________________________________________________</h2>
 				</div>
 			</div>
       </div>

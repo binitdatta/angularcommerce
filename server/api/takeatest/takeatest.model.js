@@ -7,7 +7,8 @@ var mongoose = require('mongoose'),
 
 var TakeATestSchema = new Schema({
   id: { type: String, required: false },
-  examquestion : {type: mongoose.Schema.Types.ObjectId, ref: 'ExamQuestion'},
+  examquestionid : {type: mongoose.Schema.Types.ObjectId, ref: 'ExamQuestion'},
+  examquestiontext : { type: String, required: false },
   primaryanswer: { type: String, required: false },
   primarycorrectanswer: { type: String, required: false },  
   dependentanswer: { type: String, required: false },

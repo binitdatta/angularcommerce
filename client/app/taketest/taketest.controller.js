@@ -18,6 +18,7 @@
 					$scope.problem = exam_questions[0].problem;
 					$scope._questionid = exam_questions[0]._id;
 					$scope.explanation = exam_questions[0].explanation;
+					$scope.questiontext = exam_questions[0].basicfact+':' + exam_questions[0].problem;
 
 	  var 	currentuser = Auth.getCurrentUser()._id;
 	  var username = Auth.getCurrentUser().name;
@@ -114,6 +115,8 @@
 					$scope.problem = $scope.exam_questions[nextIndex].problem;
 					$scope._questionid = $scope.exam_questions[nextIndex]._id;
 					$scope.explanation = $scope.exam_questions[nextIndex].explanation;
+					$scope.questiontext = exam_questions[nextIndex].basicfact+':' + exam_questions[nextIndex].problem;
+
 
 					 var 	currentuser = Auth.getCurrentUser()._id;
 					 var username = Auth.getCurrentUser().name;
@@ -193,6 +196,8 @@
 					$scope.problem = $scope.exam_questions[nextIndex].problem;
 					$scope._questionid = $scope.exam_questions[nextIndex]._id;
 					$scope.explanation = $scope.exam_questions[nextIndex].explanation;
+					$scope.questiontext = exam_questions[nextIndex].basicfact+':' + exam_questions[nextIndex].problem;
+
 
 					 var 	currentuser = Auth.getCurrentUser()._id;
 					 var username = Auth.getCurrentUser().name;
@@ -259,6 +264,8 @@
 		  $scope.submit = function(Auth) {
 
 			var examquestion;
+			var question;
+
 
 			/* var 	currentuser = Auth.getCurrentUser()._id;
 				 console.log('currentuser :'+currentuser);
@@ -339,9 +346,18 @@
 					 l_dependentevaluatedresult = 'I';
  					 console.log('l_dependentevaluatedresult = I');
 				 }
+				 
+				 TakeATestSvc.fetchquestion($scope._questionid)
+					  .success(function (exam_question) {
+							console.log('Take a test CKD success :'+exam_question);	
+							question = exam_question.basicfact+':'+exam_question.problem;
+							console.log('Take a test CKD success question :'+question);	
+
+					  });
 
 				 TakeATestSvc.create({
 						_questionid: $scope._questionid,
+						examquestiontext:$scope.questiontext,
 						primaryanswer:$scope.answer,
 						primarycorrectanswer:l_primarycorrectanswer,
 						dependentanswer:$scope.dependentanswer,
@@ -368,7 +384,7 @@
 			 // $scope.exam_questions = takeatest;
 			return $http.get('/api/examquestionss');
 		  };
-		
+
 		 this.create = function (takeatest) {
 			 console.log('In Create');
  			 console.log(takeatest);
@@ -377,7 +393,8 @@
 		  }; 
 
 		
-		  this.fetchquestion = function (takeatest, id) {
+		  this.fetchquestion = function (id) {
+			console.log('fetchquestion CKD :'+id);	
 			return $http.get('/api/examquestionss/'+id);
 		  }
 	});

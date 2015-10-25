@@ -17,6 +17,10 @@ angular.module('mathsgymnasiamApp')
 	{
       'title': 'Contact Us',
       'link': '/contactus'
+    },
+	{
+      'title': 'Unicorn',
+      'link': '/unicorn'
     }
 ];
 

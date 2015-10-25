@@ -71,9 +71,13 @@ console.log(local_exam_question);
 
 console.log(local_exam_question.explanation);
 
+console.log('req.body._questionid :'+req.body._questionid);
+console.log('req.body.examquestiontext :'+req.body.examquestiontext);
+
   var takeatest = new Takeatest({
     id: mongoose.Types.ObjectId(),
     examquestion: req.body._questionid,
+	examquestiontext:req.body.examquestiontext,
 	primaryanswer: req.body.primaryanswer,
 	dependentanswer:req.body.dependentanswer,
 	primarycorrectanswer:req.body.primarycorrectanswer,

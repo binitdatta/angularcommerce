@@ -13,13 +13,23 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
-      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+     <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" /> 
+      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />	-->
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
-    <link rel="stylesheet" href="app/app.css">
-	<link rel="stylesheet" href="assets/unicorn.css">
+    <!-- <link rel="stylesheet" href="app/app.css"> -->
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../../assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="../../assets/css/colorpicker.css" />
+    <link rel="stylesheet" href="../../assets/css/datepicker.css" />
+	<link rel="stylesheet" href="../../assets/css/icheck/flat/blue.css" />
+	<link rel="stylesheet" href="../../assets/css/select2.css" />
+	<link rel="stylesheet" href="../../assets/css/jquery-ui.css" />		
+	<link rel="stylesheet" href="../../assets/css/unicorn.css" />
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="js/respond.min.js"></script>
+	<![endif]-->
 
 	<!-- injector:css -->
 	<link rel="stylesheet" href="app/account/login/login.css">
@@ -31,6 +41,7 @@
 	<link rel="stylesheet" href="app/main/main.css">
 	<link rel="stylesheet" href="app/role/role.css">
 	<link rel="stylesheet" href="app/taketest/taketest.css">
+	<link rel="stylesheet" href="app/unicorn/unicorn.css">
 	<link rel="stylesheet" href="app/viewresults/viewresults.css">
 	<link rel="stylesheet" href="components/modal/modal.css">
 	<!-- endinjector -->
@@ -69,6 +80,18 @@
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+
+	        <script src="../../assets/js/jquery.min.js"></script>
+            <script src="../../assets/js/jquery-ui.custom.js"></script>
+            <script src="../../assets/js/bootstrap.min.js"></script>
+            <script src="../../assets/js/bootstrap-colorpicker.js"></script>
+            <script src="../../assets/js/bootstrap-datepicker.js"></script>
+            <script src="../../assets/js/jquery.icheck.min.js"></script>
+            <script src="../../assets/js/select2.min.js"></script>
+            
+            <script src="../../assets/js/jquery.nicescroll.min.js"></script>
+            <script src="../../assets/js/unicorn.js"></script>
+            <script src="../../assets/js/unicorn.form_common.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
@@ -94,6 +117,8 @@
           <script src="app/role/role.js"></script>
           <script src="app/taketest/taketest.controller.js"></script>
           <script src="app/taketest/taketest.js"></script>
+          <script src="app/unicorn/unicorn.controller.js"></script>
+          <script src="app/unicorn/unicorn.js"></script>
           <script src="app/viewresults/viewresults.controller.js"></script>
           <script src="app/viewresults/viewresults.js"></script>
           <script src="components/auth/auth.service.js"></script>
