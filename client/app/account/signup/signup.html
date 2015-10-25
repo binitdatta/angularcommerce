@@ -1,95 +1,134 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1>Sign up</h1>
+  <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Math <span class="em-text">Gymnasium</span></h1>
+            <p>A fun and thrilling way to enjoy and practice Math problems</p>
+            <a href="#"><img class="app-btn" src="assets/images/icon_app_store.png"></a>
+            <a href="#"><img class="app-btn" src="assets/images/icon_google_play.png"></a>
+          </div>
+          <div class="col-md-6">
+            <!-- <img class="showcase-img" src="assets/images/mathcup_10.jpg"> -->
+            <img class="showcase-img" src="assets/images/mathcup10.jpg">
+			
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12">
-      <form class="form" name="form" ng-submit="register(form)" novalidate>
 
-        <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+ <div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-8">
+			<div class="widget-content nopadding">
+				<div class="widget-box">
+					 <h1>Sign up</h1>
+					  <form class="form-horizontal" name="form" ng-submit="register(form)" novalidate>
+
+					
+
+					  <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                             'has-error': form.name.$invalid && submitted }">
-          <label>Name</label>
+							<label for="user.name" class="col-sm-2 control-label control-label-inline">Name</label>
+							<div class="col-sm-10">
+								<input type="text" name="name" class="form-control form-control-inline" id="email" ng-model="ng-model="user.name" required width="100" placeholder="name">
+								<p class="help-block" ng-show="form.name.$error.required && submitted">
+										A name is required
+									</p>
+							</div>
+					  </div>
 
-          <input type="text" name="name" class="form-control" ng-model="user.name"
-                 required/>
-          <p class="help-block" ng-show="form.name.$error.required && submitted">
-            A name is required
-          </p>
-        </div>
 
-		<div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+					   <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                             'has-error': form.name.$invalid && submitted }">
-          <label>Grade</label>
+							<label for="user.grade" class="col-sm-2 control-label control-label-inline">Grade</label>
+							<div class="col-sm-10">
+								<select id="gradeSel" ng-model="user.grade">
+								  <option selected="selected">Select</option> 
+								  <option value="Hello" selected> Hello </option>
+								  <option value="GradeVI">Grade6</option>
+								  <option value="GradeVII">Grade7</option>
+								  <option value="GradeVIII">Grade8</option>
+							</select>
+							<p class="help-block" ng-show="form.name.$error.required && submitted">
+								A grade is required
+							</p>
+							</div>
+					  </div>
 
-					<select id="gradeSel" ng-model="user.grade">
-   						  <option selected="selected">Select</option> 
-						  <option value="Hello" selected> Hello </option>
-					      <option value="GradeVI">Grade6</option>
-					      <option value="GradeVII">Grade7</option>
-					      <option value="GradeVIII">Grade8</option>
-					</select>
-          <p class="help-block" ng-show="form.name.$error.required && submitted">
-            A grade is required
-          </p>
-        </div>
+					 <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                            'has-error': form.name.$invalid && submitted }">
+							<label for="user.email" class="col-sm-2 control-label control-label-inline">Email</label>
+							<div class="col-sm-10">
+							 <input type="email" name="email" class="form-control form-control-inline" ng-model="user.email"
+							 required
+							 mongoose-error/>
+							  <p class="help-block" ng-show="form.email.$error.email && submitted">
+								Doesn't look like a valid email.
+							  </p>
+							  <p class="help-block" ng-show="form.email.$error.required && submitted">
+								What's your email address?
+							  </p>
+							  <p class="help-block" ng-show="form.email.$error.mongoose">
+								{{ errors.email }}
+							  </p>
+							</div>
+					  </div>	
+					
 
-        <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
-                                            'has-error': form.email.$invalid && submitted }">
-          <label>Email</label>
+					 <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                            'has-error': form.name.$invalid && submitted }">
+									<label for="user.password" class="col-sm-2 control-label control-label-inline">Password</label>
+							<div class="col-sm-10">
+									 <input type="password" name="password" class="form-control form-control-inline" ng-model="user.password" ng-minlength="3" required mongoose-error/>
+								  <p class="help-block"
+									 ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
+									Password must be at least 3 characters.
+								  </p>
+								  <p class="help-block" ng-show="form.password.$error.mongoose">
+									{{ errors.password }}
+								  </p>
+							</div>
+					 </div>
 
-          <input type="email" name="email" class="form-control" ng-model="user.email"
-                 required
-                 mongoose-error/>
-          <p class="help-block" ng-show="form.email.$error.email && submitted">
-            Doesn't look like a valid email.
-          </p>
-          <p class="help-block" ng-show="form.email.$error.required && submitted">
-            What's your email address?
-          </p>
-          <p class="help-block" ng-show="form.email.$error.mongoose">
-            {{ errors.email }}
-          </p>
-        </div>
 
-        <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
-                                            'has-error': form.password.$invalid && submitted }">
-          <label>Password</label>
-
-          <input type="password" name="password" class="form-control" ng-model="user.password"
-                 ng-minlength="3"
-                 required
-                 mongoose-error/>
-          <p class="help-block"
-             ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
-            Password must be at least 3 characters.
-          </p>
-          <p class="help-block" ng-show="form.password.$error.mongoose">
-            {{ errors.password }}
-          </p>
-        </div>
-
-        <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit">
-            Sign up
-          </button>
-          <a class="btn btn-default btn-lg btn-register" href="/login">
-            Login
-          </a>
-        </div>
-
-        <hr>
-        <div>
-          <a class="btn btn-facebook" href="" ng-click="loginOauth('facebook')">
-            <i class="fa fa-facebook"></i> Connect with Facebook
-          </a>
-          <a class="btn btn-google-plus" href="" ng-click="loginOauth('google')">
-            <i class="fa fa-google-plus"></i> Connect with Google+
-          </a>
-        </div>
-      </form>
-    </div>
-  </div>
-  <hr>
+				<div>
+				  <button class="btn btn-inverse btn-lg btn-login" type="submit">
+					Sign up
+				  </button>
+				  <a class="btn btn-default btn-lg btn-register" href="/login">
+					Login
+				  </a>
+				    <a class="btn btn-facebook" href="" ng-click="loginOauth('facebook')">
+					<i class="fa fa-facebook"></i> Connect with Facebook
+				  </a>
+				  <a class="btn btn-google-plus" href="" ng-click="loginOauth('google')">
+					<i class="fa fa-google-plus"></i> Connect with Google+
+				  </a>
+				</div>
+			</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+  <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+		 <div class="row">
+			<div id="footer" class="col-xs-12">
+				Copyright &copy; 2015, All Rights Reserved. 2012 - 2013 &copy; Unicorn Admin. Brought to you by <a href="https://wrapbootstrap.com/user/diablo9983">diablo9983</a>
+			</div>
+		</div>
+        </div>
+      </div>
+    </footer>
