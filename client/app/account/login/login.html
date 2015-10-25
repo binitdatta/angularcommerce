@@ -1,58 +1,99 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1>Login</h1>
-      <p>Accounts are reset on server restart from <code>server/config/seed.js</code>. Default account is <code>test@test.com</code> / <code>test</code></p>
-      <p>Admin account is <code>admin@admin.com</code> / <code>admin</code></p>
+   <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Math <span class="em-text">Gymnasium</span></h1>
+            <p>A fun and thrilling way to enjoy and practice Math problems</p>
+            <a href="#"><img class="app-btn" src="assets/images/icon_app_store.png"></a>
+            <a href="#"><img class="app-btn" src="assets/images/icon_google_play.png"></a>
+          </div>
+          <div class="col-md-6">
+            <!-- <img class="showcase-img" src="assets/images/mathcup_10.jpg"> -->
+            <img class="showcase-img" src="assets/images/mathcup10.jpg">
+			
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12">
-      <form class="form" name="form" ng-submit="login(form)" novalidate>
 
-        <div class="form-group">
-          <label>Email</label>
+ <div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-8">
+			<div class="widget-content nopadding">
+				<div class="widget-box">
+						<div>
+						 <h1>Login</h1>
+					      <h3>Accounts are reset on server restart from <code>server/config/seed.js</code>. Default account is <code>test@test.com</code> / <code>test</code></h3>
+					      <h3>Admin account is <code>admin@admin.com</code> / <code>admin</code></h3>
+					    </div>
+						<div>
+						 <form class="form-horizontal" name="form" ng-submit="login(form)" novalidate>
+							  <div class="form-group">
+									<label for="user.email" class="col-sm-2 control-label control-label-inline">Email</label>
+									<div class="col-sm-10">
+										<input type="email" name="email" class="form-control form-control-inline" id="email" ng-model="user.email" required width="100" placeholder="email">
+									</div>
+							  </div>
 
-          <input type="email" name="email" class="form-control" ng-model="user.email" required>
-        </div>
+							  <div class="form-group">
+									<label for="user.password" class="col-sm-2 control-label control-label-inline">Password</label>
+									<div class="col-sm-10">
+										<input type="password" name="password" class="form-control form-control-inline" id="password" ng-model="user.password" required width="100" placeholder="email">
+									</div>
+							  </div>
+						      
+							<div class="form-group has-error">
+						          <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
+						             Please enter your email and password.
+						          </p>
+						          <p class="help-block" ng-show="form.email.$error.email && submitted">
+							             Please enter a valid email.
+						          </p>
+						          <p class="help-block">{{ errors.other }}</p>
+					        </div>
 
-        <div class="form-group">
-          <label>Password</label>
+							<div>
+							  <button class="btn btn-inverse btn-lg btn-login" type="submit">
+								Login
+							  </button>
+							  <a class="btn btn-default btn-lg btn-register" href="/signup">
+								Register
+							  </a>
+							    <a class="btn btn-facebook" href="" ng-click="loginOauth('facebook')">
+								<i class="fa fa-facebook"></i> Connect with Facebook
+							  </a>
+							  <a class="btn btn-google-plus" href="" ng-click="loginOauth('google')">
+								<i class="fa fa-google-plus"></i> Connect with Google+
+							  </a>
+							</div>
 
-          <input type="password" name="password" class="form-control" ng-model="user.password" required>
-        </div>
-
-        <div class="form-group has-error">
-          <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
-             Please enter your email and password.
-          </p>
-          <p class="help-block" ng-show="form.email.$error.email && submitted">
-             Please enter a valid email.
-          </p>
-
-          <p class="help-block">{{ errors.other }}</p>
-        </div>
-
-        <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit">
-            Login
-          </button>
-          <a class="btn btn-default btn-lg btn-register" href="/signup">
-            Register
-          </a>
-        </div>
-
-        <hr>
-        <div>
-          <a class="btn btn-facebook" href="" ng-click="loginOauth('facebook')">
-            <i class="fa fa-facebook"></i> Connect with Facebook
-          </a>
-          <a class="btn btn-google-plus" href="" ng-click="loginOauth('google')">
-            <i class="fa fa-google-plus"></i> Connect with Google+
-          </a>
-        </div>
-      </form>
-    </div>
-  </div>
-  <hr>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+  <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+		 <div class="row">
+			<div id="footer" class="col-xs-12">
+				Copyright &copy; 2015, All Rights Reserved. 2012 - 2013 &copy; Unicorn Admin. Brought to you by <a href="https://wrapbootstrap.com/user/diablo9983">diablo9983</a>
+			</div>
+		</div>
+        </div>
+      </div>
+    </footer>
+
+   
