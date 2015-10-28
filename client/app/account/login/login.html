@@ -21,14 +21,19 @@
  <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-8">
-			<div class="widget-content nopadding">
+			<div class="col-md-10 col-md-offset-4">
 				<div class="widget-box">
 						<div>
-						 <h1>Login</h1>
+						  <div class="widget-title">
+								<span class="icon">
+									<i class="fa fa-align-justify"></i>									
+								</span>
+								<h5>Login</h5>
+						</div>
 					      <h3>Accounts are reset on server restart from <code>server/config/seed.js</code>. Default account is <code>test@test.com</code> / <code>test</code></h3>
 					      <h3>Admin account is <code>admin@admin.com</code> / <code>admin</code></h3>
 					    </div>
-						<div>
+						<div clsss="login-center">
 						 <form class="form-horizontal" name="form" ng-submit="login(form)" novalidate>
 							  <div class="form-group">
 									<label for="user.email" class="col-sm-2 control-label control-label-inline">Email</label>
