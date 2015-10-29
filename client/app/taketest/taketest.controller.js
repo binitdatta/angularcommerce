@@ -115,7 +115,7 @@
 					$scope.problem = $scope.exam_questions[nextIndex].problem;
 					$scope._questionid = $scope.exam_questions[nextIndex]._id;
 					$scope.explanation = $scope.exam_questions[nextIndex].explanation;
-					$scope.questiontext = exam_questions[nextIndex].basicfact+':' + exam_questions[nextIndex].problem;
+					$scope.questiontext = $scope.exam_questions[nextIndex].basicfact+':' + $scope.exam_questions[nextIndex].problem;
 
 
 					 var 	currentuser = Auth.getCurrentUser()._id;
@@ -196,7 +196,7 @@
 					$scope.problem = $scope.exam_questions[nextIndex].problem;
 					$scope._questionid = $scope.exam_questions[nextIndex]._id;
 					$scope.explanation = $scope.exam_questions[nextIndex].explanation;
-					$scope.questiontext = exam_questions[nextIndex].basicfact+':' + exam_questions[nextIndex].problem;
+					$scope.questiontext = $scope.exam_questions[nextIndex].basicfact+':' + $scope.exam_questions[nextIndex].problem;
 
 
 					 var 	currentuser = Auth.getCurrentUser()._id;
@@ -279,7 +279,6 @@
 				console.log('$scope.explanation :'+$scope.explanation);
 
 		  /*TakeATestSvc.fetchquestion($scope._id).success(function (exam_question) {
-
 			  examquestion =  exam_question;
 		   } */
 			     var l_primarycorrectanswer = '';

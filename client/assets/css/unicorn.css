@@ -166,16 +166,19 @@ a:hover {
   z-index: 0;
 }
 #header h1 {
-  background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
+  /* background: url("../img/logo.png") no-repeat scroll 0 0 transparent; */
+ 
+  font-size: 20px;
   height: 31px;
   left: 15px;
-  line-height: 600px;
+  line-height: 25px; /* 600px */
   overflow: hidden;
   position: relative;
   top: 24px;
   width: 191px;
 }
 #header h1 a {
+  color: #ffffff;
   display: block;
 }
 @media (max-width: 440px) {
@@ -726,7 +729,7 @@ a:hover {
   margin-right: 0;
   margin-top: -39px;
   position: relative;
-  min-height: 500px;
+  min-height: 700px;
   width: auto;
   -webkit-background-clip: padding-box;
   border-bottom-left-radius: 8px;

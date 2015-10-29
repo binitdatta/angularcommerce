@@ -31,71 +31,43 @@
 					</div>
 					  <form class="form-horizontal" name="form" ng-submit="register(form)" novalidate>
 
-					
-
-					  <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+					    <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                             'has-error': form.name.$invalid && submitted }">
-							<label for="user.name" class="col-sm-2 control-label control-label-inline">Name</label>
-							<div class="col-sm-10">
-								<input type="text" name="name" class="form-control form-control-inline" id="email" ng-model="ng-model="user.name" required width="100" placeholder="name">
-								<p class="help-block" ng-show="form.name.$error.required && submitted">
-										A name is required
-									</p>
-							</div>
-					  </div>
+									<label for="user.email" class="col-sm-5 col-md-5 col-lg-3 control-label">Name</label>
+									<div  class="col-sm-5 col-md-5 col-lg-6">
+											<input type="text" name="name" class="form-control form-control-inline" id="name" ng-model="ng-model="user.name" required width="100" placeholder="name">
+									</div>
+						</div>
 
 
 					   <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                             'has-error': form.name.$invalid && submitted }">
-							<label for="user.grade" class="col-sm-2 control-label control-label-inline">Grade</label>
-							<div class="col-sm-10">
+							<label for="user.grade" class="col-sm-5 col-md-5 col-lg-3 control-label">Grade</label>
+							<div class="col-sm-5 col-md-5 col-lg-6">
 								<select id="gradeSel" ng-model="user.grade">
 								  <option selected="selected">Select</option> 
-								  <option value="Hello" selected> Hello </option>
-								  <option value="GradeVI">Grade6</option>
+								  <option value="GradeVI" selected>Grade6</option>
 								  <option value="GradeVII">Grade7</option>
 								  <option value="GradeVIII">Grade8</option>
-							</select>
-							<p class="help-block" ng-show="form.name.$error.required && submitted">
-								A grade is required
-							</p>
+								</select>
 							</div>
 					  </div>
 
-					 <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+					    <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                             'has-error': form.name.$invalid && submitted }">
-							<label for="user.email" class="col-sm-2 control-label control-label-inline">Email</label>
-							<div class="col-sm-10">
-							 <input type="email" name="email" class="form-control form-control-inline" ng-model="user.email"
-							 required
-							 mongoose-error/>
-							  <p class="help-block" ng-show="form.email.$error.email && submitted">
-								Doesn't look like a valid email.
-							  </p>
-							  <p class="help-block" ng-show="form.email.$error.required && submitted">
-								What's your email address?
-							  </p>
-							  <p class="help-block" ng-show="form.email.$error.mongoose">
-								{{ errors.email }}
-							  </p>
-							</div>
-					  </div>	
-					
+									<label for="user.email" class="col-sm-5 col-md-5 col-lg-3 control-label">Email</label>
+									<div  class="col-sm-5 col-md-5 col-lg-6">
+											 <input type="email" name="email" class="form-control form-control-inline" ng-model="user.email" placeholder="email" required mongoose-error/>
+									</div>
+						</div>
 
-					 <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+						  <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                             'has-error': form.name.$invalid && submitted }">
-									<label for="user.password" class="col-sm-2 control-label control-label-inline">Password</label>
-							<div class="col-sm-10">
-									 <input type="password" name="password" class="form-control form-control-inline" ng-model="user.password" ng-minlength="3" required mongoose-error/>
-								  <p class="help-block"
-									 ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
-									Password must be at least 3 characters.
-								  </p>
-								  <p class="help-block" ng-show="form.password.$error.mongoose">
-									{{ errors.password }}
-								  </p>
-							</div>
-					 </div>
+									<label for="user.email" class="col-sm-5 col-md-5 col-lg-3 control-label">Password</label>
+									<div  class="col-sm-5 col-md-5 col-lg-6">
+										 <input type="password" name="password" class="form-control form-control-inline" ng-model="user.password" placeholder="password" ng-minlength="3" required mongoose-error/>
+									</div>
+						</div>
 
 
 				<div align="center">
@@ -112,6 +84,8 @@
 					<i class="fa fa-google-plus"></i> Connect with Google+
 				  </a>
 				</div>
+
+
 			</form>
 				</div>
 			</div>
