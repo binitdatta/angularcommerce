@@ -12,20 +12,21 @@
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav ">
         <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
+            <a ng-href="{{item.link}}"><span class="text">{{item.title}}</span></a>
         </li>
-        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
-        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/addquestion">Add Question</a></li>
-        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/addrole">Add Role</a></li>
-        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/admin')}"><a href="/addstudent">Add Student</a></li>
+        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin"><span class="text">Admin</span></a></li>
+        <!-- <li class="btn" ><a title="" href="#"><i class="fa fa-user"></i> <span class="text">Profile</span></a></li> -->
+        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/addquestion"><span class="text">Add Question</span></a></li>
+        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/addrole"><span class="text">Add Role</span></a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/admin')}"><a href="/addstudent"><span class="text">Add Student</span></a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
-        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
-        <li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup"><span class="text">Sign up</span></a></li>
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login"><span class="text">Login</span></a></li>
+        <li ng-show="isLoggedIn()"><p class="navbar-text"><span class="text">Hello {{ getCurrentUser().name }}</span></p> </li>
         <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()"><span class="text">Logout</span></a></li>
       </ul>
     </div>
   </div>

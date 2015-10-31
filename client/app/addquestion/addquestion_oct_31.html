@@ -1,0 +1,346 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<!-- <header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Contact Us!!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header> -->
+
+  <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Math <span class="em-text">Gymnasium</span></h1>
+            <p>A fun and thrilling way to enjoy and practice Math problems</p>
+            <a href="#"><img class="app-btn" src="assets/images/icon_app_store.png"></a>
+            <a href="#"><img class="app-btn" src="assets/images/icon_google_play.png"></a>
+          </div>
+          <div class="col-md-6">
+            <!-- <img class="showcase-img" src="assets/images/mathcup_10.jpg"> -->
+            <img class="showcase-img" src="assets/images/mathcup10.jpg">
+			
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div  class='container' ng-controller='AddQuestionCtrl'>
+        <h1>Add Math Problems</h1>
+         <form class="form-horizontal">
+			 <div class="form-group"> <!-- ID -->
+                  <label for="firstname" class="col-sm-2 control-label control-label-inline">ID</label>
+                  <div class="col-sm-10">
+                        <input class="form-control form-control-inline" id="id" ng-model="id" width="100" placeholder="ID">
+                  </div>
+              </div> <!-- ID -->
+			  <div class="form-group"><!-- Basic Fact -->
+                  <label for="basicfact" class="col-sm-2 control-label control-label-inline">Basic Fact</label>
+                  <div class="col-sm-10">
+                        <input class="form-control form-control-inline" id="basicfact" ng-model="basicfact" width="100" placeholder="Basic Fact">
+                  </div>
+              </div><!-- Basic Fact -->
+			   <div class="form-group">	<!-- School Grade -->
+                  <label for="gradeSel" class="col-sm-2 control-label control-label-inline">School Grade</label>
+                  <div class="col-sm-10">
+                     <select id="gradeSel" class="form-control" ng-model="grade">
+   						  <option selected="selected">Select</option> 
+						  <option value="Hello" selected> Hello </option>
+					      <option value="GradeVI">Grade6</option>
+					      <option value="GradeVII">Grade7</option>
+					      <option value="GradeVIII">Grade8</option>
+					</select>
+                  </div>
+              </div>   <!-- School Grade -->
+			  <div class="form-group">	<!-- School Grade -->
+                  <label for="questiontypeSel" class="col-sm-2 control-label control-label-inline">Type</label>
+                  <div class="col-sm-10">
+                     <select id="questiontypeSel" class="form-control" ng-model="questiontype">
+						  <option selected="selected">Select</option>
+						  <option value="Hello" selected> Hello </option>
+						  <option value="WordProblem">WordProblem</option>
+						  <option value="Algebra">Algebra</option>
+						   <option value="Geometry">Geometry</option>
+					</select>
+                  </div>
+              </div>	 <!-- School Grade -->
+		    <div class="form-group">    <!-- Part -->
+                  <label for="firstname" class="col-sm-2 control-label control-label-inline">Part</label>
+                  <div class="col-sm-10">
+                        <input class="form-control form-control-inline" id="part" ng-model="part" width="2" placeholder="Part">
+                  </div>
+              </div>  <!-- Part -->
+			  <div class="form-group">  <!-- Question -->
+                  <label for="firstname" class="col-sm-2 control-label control-label-inline">Question</label>
+                  <div class="col-sm-10">
+						<textarea rows="4" cols="50" class='form-control' ng-model="problem"></textarea>
+				  </div>
+              </div>	 <!-- Question -->
+
+			    <div class="form-group">  <!-- Explanation -->
+						    <label for="explanation" class="col-sm-2 control-label control-label-inline">Explanation</label>
+			                  <div class="col-sm-10">
+									<textarea rows="4" cols="50" id="explanation" class='form-control' ng-model="explanation"></textarea>
+							  </div>
+						   </div>	 <!-- Explanation -->
+
+			  </form> <!-- First horizontal form -->
+			  <form class="form-inline">
+            	<div class="blockDiv answerDiv">
+    	            	<div class="blockDiv labelDiv title">Answers</div>
+						<div class="blockDiv rowDiv">
+							<div class="blockDiv labelDiv"><strong>&nbsp;</strong></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label control-label-inline">ID</label>
+								<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+								<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+								<label class="col-sm-2 control-label control-label-inline">Type</label>
+								<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+								<label class="col-sm-2 control-label control-label-inline">Answer</label>
+								<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+								<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+								<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+								<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+
+						    </div>
+						</div>
+						<div class="blockDiv rowDiv">
+							<div class="blockDiv labelDiv"><strong>Answer A</strong></div>
+							<div class="form-group">
+							    <input type="text" class="form-control" id="answersfirstanswerid" ng-model="answersfirstanswerid" width="100" placeholder="">
+
+								<select id="answertypesel" class="form-control" width="20" ng-model="answersfirstanswertype">
+								  <option selected="selected">Select</option> 
+								  <option value="Correct" selected>Correct</option>
+							      <option value="Incorrect">Incorrect</option>
+							   </select>   
+
+							   <input type="text" class="form-control" id="answersfirstanswer" ng-model="answersfirstanswer" width="100" placeholder="">
+						    </div>
+						</div>
+
+						  <div class="blockDiv rowDiv">
+							<div class="blockDiv labelDiv"><strong>Answer B</strong></div>
+							<div class="form-group">
+							    <input type="text" class="form-control" id="answerssecondanswerid" ng-model="answerssecondanswerid" width="5" placeholder="">
+							   <select id="answertypesel" class="form-control" width="20" ng-model="answerssecondanswertype">
+								  <option selected="selected">Select</option> 
+								  <option value="Correct" selected>Correct</option>
+							      <option value="Incorrect">Incorrect</option>
+							   </select>
+							      <input type="text" class="form-control" id="answerssecondanswer" ng-model="answersfirstanswer" width="25" placeholder="">
+						    </div>
+						</div>
+
+						 <div class="blockDiv rowDiv">
+							<div class="blockDiv labelDiv"><strong>Answer C</strong></div>
+							<div class="form-group">
+							    <input type="text" class="form-control" id="answersthirdanswerid" ng-model="answersthirdanswerid" width="5" placeholder="">
+								<select id="answertypesel" class="form-control" width="20" ng-model="answersthirdanswertype">
+								  <option selected="selected">Select</option> 
+								  <option value="Correct" selected>Correct</option>
+							      <option value="Incorrect">Incorrect</option>
+							   </select>
+							     <input type="text" class="form-control" id="answersthirdanswer" ng-model="answersthirdanswer" width="25" placeholder="">
+						    </div>
+						
+						</div>
+						 
+						 	 <div class="blockDiv rowDiv">
+							<div class="blockDiv labelDiv"><strong>Answer D</strong></div>
+							<div class="form-group">
+							    <input type="text" class="form-control" id="answersforthanswerid" ng-model="answersforthanswerid" width="5" placeholder="">
+								<select id="answertypesel" class="form-control" width="20" ng-model="answersforthanswertype">
+								  <option selected="selected">Select</option> 
+								  <option value="Correct" selected>Correct</option>
+							      <option value="Incorrect">Incorrect</option>
+							   </select>
+							     <input type="text" class="form-control" id="answersforthanswer" ng-model="answersforthanswer" width="25" placeholder="">
+						    </div>
+						
+						</div>
+
+			
+						
+					  </form> <!-- Answer inline form -->
+						
+
+						<div class="blockDiv rowDiv">	
+							<div class="blockDiv labelDiv">
+								<button ng-click='addAnswers()' class='btn btn-default'>
+									<strong>Add Answers</strong>
+								</button>
+							</div>							
+							<div class="blockDiv labelDiv">&nbsp;</div>
+							<div class="blockDiv labelDiv">
+								<button ng-click='showDependentQuestionsSubForm()' class='btn btn-default'>
+									<strong>Show Dependent Question</strong>
+								</button>
+							</div>
+							<div class="blockDiv labelDiv">&nbsp;</div>
+							<div class="blockDiv labelDiv">
+								<button ng-click='hideDependentQuestionsSubForm()' class='btn btn-default'>
+									<strong>Hide Dependent Question</strong>
+								</button>
+							</div>
+							<div class="blockDiv labelDiv">&nbsp;</div>
+							<div class="blockDiv labelDiv">
+								<button ng-click='addQuestions()' class='btn btn-default'>
+									<strong>Add Question</strong>
+								</button>
+							</div>
+						</div>
+
+					</div>
+					<!-- Dependent Question -->
+					<div id="dependentquestion" style="display:none">
+						<form class="form-horizontal">
+							<div class="blockDiv label1Div title">Dependent Question</div> <!-- first inner div dependent question -->
+							 <div class="blockDiv rowDiv">
+								<div class="form-group">  <!-- Dependent Question Part -->
+									<label for="dependentquestion.part" class="col-sm-2 control-label control-label-inline">Part</label>
+									  <div class="col-sm-10">
+										<input width="2" id="dependentquestion.part" class='form-control' ng-model="dependentquestion.part"></div>
+									  </div>
+							   </div>	 <!-- Dependent Question Part -->
+
+							   <div class="form-group">  <!-- Dependent Question Problem -->
+									<label for="dependentquestion.problem" class="col-sm-2 control-label control-label-inline">Problem</label>
+									  <div class="col-sm-10">
+										<textarea rows="4" cols="50" class='form-control' ng-model="dependentquestion.problem"></textarea>
+									  </div>
+							   </div>	 <!-- Dependent Question Problem -->
+
+							    <div class="form-group">  <!-- Dependent Question Explanation -->
+									<label for="dependentquestion.explanation" class="col-sm-2 control-label control-label-inline">Explanation</label>
+									  <div class="col-sm-10">
+										<textarea rows="4" cols="50" class='form-control' ng-model="dependentquestion.explanation"></textarea>
+									  </div>
+							   </div>	 <!-- Dependent Question Explanation -->
+							</div> <!-- row div -->
+							
+						</form>
+						<div id="dependentquestionanswers" style="display:none">
+							 <form class="form-inline">
+								<div class="blockDiv answerDiv">
+										<div class="blockDiv label2Div title"><strong>Dependent Question Answers</strong></div>
+								</div>
+								<div class="blockDiv rowDiv">
+										<div class="blockDiv labelDiv"><strong>&nbsp;</strong></div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label control-label-inline">ID</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">Type</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">Answer</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+											<label class="col-sm-2 control-label control-label-inline">&nbsp;</label>
+
+										</div>
+									<!-- <div class="blockDiv labelDiv">&nbsp;</div><div class="blockDiv labelDiv col1">ID</div><div class="blockDiv labelDiv col2">Type</div><div class="blockDiv labelDiv col3">Answer</div>  -->
+								</div>
+								 <div class="blockDiv rowDiv">
+									<div class="blockDiv labelDiv"><strong>Answer A</strong></div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="dependentquestionanswersfirstanswerid" ng-model="dependentquestionanswersfirstanswerid" width="5" placeholder="">
+										   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionanswersfirstanswertype">
+											  <option selected="selected">Select</option> 
+											  <option value="Correct" selected>Correct</option>
+											  <option value="Incorrect">Incorrect</option>
+										   </select>
+										   	<input type="text" class="form-control" id="dependentquestionanswersfirstanswer" ng-model="dependentquestionanswersfirstanswer" width="25" placeholder="">
+										</div>
+									
+									</div>
+									 <div class="blockDiv rowDiv">
+											<div class="blockDiv labelDiv"><strong>Answer B</strong></div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="dependentquestionanswerssecondanswerid" ng-model="dependentquestionanswerssecondanswerid" width="5" placeholder="">
+											   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionanswerssecondanswertype">
+												  <option selected="selected">Select</option> 
+												  <option value="Correct" selected>Correct</option>
+												  <option value="Incorrect">Incorrect</option>
+											   </select>
+											   <input type="text" class="form-control" id="dependentquestionsecondanswer" ng-model="dependentquestionsecondanswer" width="25" placeholder="">
+											</div>
+									</div>
+									<div class="blockDiv rowDiv">
+										<div class="blockDiv labelDiv"><strong>Answer C</strong></div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="dependentquestionthirdanswerid" ng-model="dependentquestionthirdanswerid" width="5" placeholder="">
+												   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionthirdanswertype">
+												  <option selected="selected">Select</option> 
+												  <option value="Correct" selected>Correct</option>
+												  <option value="Incorrect">Incorrect</option>
+											   </select>
+											   <input type="text" class="form-control" id="dependentquestionthirdanswer" ng-model="dependentquestionthirdanswer" width="25" placeholder="">
+											</div>
+									</div>
+
+									<div class="blockDiv rowDiv">
+											<div class="blockDiv labelDiv"><strong>Answer D</strong></div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="dependentquestionforthanswerid" ng-model="dependentquestionforthanswerid" width="5" placeholder="">
+											   <select id="answertypesel" class="form-control" width="20" ng-model="dependentquestionforthanswertype">
+												  <option selected="selected">Select</option> 
+												  <option value="Correct" selected>Correct</option>
+												  <option value="Incorrect">Incorrect</option>
+											   </select>
+											   <input type="text" class="form-control" id="dependentquestionforthanswer" ng-model="dependentquestionforthanswer" width="25" placeholder="">
+											</div>
+									</div>
+							 </form>
+							 <div class="blockDiv rowDiv">	
+								<div class="blockDiv labelDiv">
+									<button ng-click='addDependentQuestions()' class='btn btn-default'><strong>Add Dependent Question</strong></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Dependent Question -->
+
+                </div>
+            </div>
+       
+        <br/>
+        <ul class='list-group'>
+            <li ng-repeat='question in exam_questions' class='list-group-item'>
+                <strong>@{{ question.type }}</strong>
+                <strong>@{{ question.basic_fact }}</strong>
+                <strong>@{{ question.part }}</strong>
+                <span>{{ question.problem }}</span>
+                <span>{{ question.explanation }}</span>
+                <ul ng-repeat="answerrow in question.answers">
+                    <li>{{answerrow.type}} : {{answerrow.answer}}</li>
+                </ul>
+				 <ul ng-repeat="dependentrow in question.dependentquestions">
+                    <li>{{dependentrow.type}} : {{dependentrow.problem}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+  <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <p>Copyright &copy; 2015, All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>

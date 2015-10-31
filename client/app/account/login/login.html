@@ -80,6 +80,46 @@
 	</div>
 </div>
 
+ 	<div class="row">
+					<div class="col-xs-10">
+						<div class="widget-box">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="fa fa-th"></i>
+								</span>
+								<h5>Enter Answers</h5>
+							</div>
+							<div class="widget-content nopadding">
+								<table class="table table-bordered table-striped table-hover">
+								<thead>
+										<tr>
+											<th>Exam Question</th>
+											<th>Primary Answer</th>
+											<th>Primary Correct Answer</th>
+											<th>Primary Result</th>
+											<th>Dependent Answer</th>
+											<th>Dependent Correct Answer</th>
+											<th>Dependent Result</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr ng-repeat="result in studentresults">
+											<td><strong>{{result.examquestiontext}}</strong></td>
+											<td><strong>{{result.primaryanswer}}</strong></td>
+											<td><strong>{{result.primarycorrectanswer}}</strong></td>
+											<td><strong>{{result.primaryevaluatedresult}}</strong></td>
+											<td><strong>{{result.dependentanswer}}</strong></td>
+											<td><strong>{{result.dependentcorrectanswer}}</strong></td>
+											<td><strong>{{result.dependentevaluatedresult}}</strong></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+					</div>
+				</div>
+	</div>
+
+
   <footer>
       <div class="container">
         <div class="row">
