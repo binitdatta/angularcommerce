@@ -3,20 +3,60 @@
 angular.module('mathsgymnasiamApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
+      'title': 'Appliances',
       'link': '/'
     },
 	{
-      'title': 'Take a Test',
-      'link': '/takeatest'
+      'title': 'Auto',
+      'link': '/auto'
     },
 	{
-      'title': 'View Results',
-      'link': '/viewresults'
+      'title': 'Baby',
+      'link': '/baby'
     },
 	{
-      'title': 'Contact Us',
-      'link': '/contactus'
+      'title': 'Clothing',
+      'link': '/clothing'
+    },
+	{
+      'title': 'Electronics',
+      'link': '/electronics'
+    },
+	{
+      'title': 'Fitness',
+      'link': '/fitness'
+    },
+	{
+      'title': 'Home',
+      'link': '/home'
+    },
+	{
+      'title': 'Jewelry',
+      'link': '/jewelry'
+    },
+	{
+      'title': 'Outdoor',
+      'link': '/sutdoor'
+    },
+	{
+      'title': 'Parts & Services',
+      'link': '/partsservices'
+    },
+	{
+      'title': 'Shoes',
+      'link': '/shoes'
+    },
+	{
+      'title': 'Tools',
+      'link': '/tools'
+    },
+	{
+      'title': 'Toys',
+      'link': '/toys'
+    },
+	{
+      'title': 'Deals',
+      'link': '/deals'
     }
 ];
 

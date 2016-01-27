@@ -29,6 +29,58 @@ p, h1 {
 }
 
 
+/*HEADER TOP*/
+
+.headertop {
+ padding: 20px 0 10px;
+ background: url(../assets/images/bg.jpg) no-repeat center center;
+ background-size: cover;
+ width: 100%;
+ border-bottom: 2px solid #c9c9c9;
+}
+
+.headertop h1 {
+ color: white;
+ font-family: 'Ariel';
+ font-size: 1.0em;
+}
+
+.headertop p {
+ color:white;
+ font-size:1.3em;
+}
+
+.headertop .btn {
+ padding: 5px 50px 5px 50px;
+ border-radius: 0;
+}
+
+@media(max-width:768px) {
+
+ .headertop {
+  text-align:center;
+  padding-top: 20%;
+ }
+
+ .headertop h1 {
+ font-size:5em;
+ }
+ 
+ .headertop p {
+  font-size:1em;
+ }
+ 
+ .headertop .btn {
+  padding: 5px 12px 5px 12px;
+ }
+ 
+ .headertop img {
+  padding-top:10%;
+ }
+
+}
+
+
 /*HEADER*/
 
 .header {
