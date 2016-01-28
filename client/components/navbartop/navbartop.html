@@ -1,0 +1,21 @@
+<div class="navbar navbar-default navbar-static-top navbar-fixed-top" ng-controller="NavbarTopCtrl" role="navigation">
+
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand em-text"></a>
+    </div>
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav ">
+        <li ng-repeat="item in topmenu" ng-class="{active: isActive(item.link)}">
+            <a ng-href="{{item.link}}"><span class="text">{{item.title}}</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
