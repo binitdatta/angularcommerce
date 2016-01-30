@@ -61,6 +61,39 @@ p, h1 {
  border-radius: 0;
 }
 
+.fixed {
+        position: fixed;
+		float:right;
+		align:right;
+        width: 25%;
+}
+.scrollit {
+        float: left;
+		align:left;
+        width: 71%
+}
+
+
+.col-fixed-240{
+    width:240px;
+    background:red;
+/*    position:fixed; */
+	float:right;
+    height:40%;
+}
+
+.col-fixed-160{
+    margin-left:240px;
+    width:160px;
+    background:blue;
+    position:fixed;
+    height:100%;
+}
+
+.col-offset-400{
+    padding-left:10px;
+}
+
 @media(max-width:768px) {
 
  .headertop {
